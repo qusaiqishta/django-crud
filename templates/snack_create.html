@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Create Your Own Snack</h2>
+
+<form action="" method="POST">
+    <!-- for security purpose add csrf -->
+    {% csrf_token %}
+    <!-- to make the form more arranged make it as paragraph -->
+    {{form.as_p}}
+    <input type="submit" value="Add">
+</form>
+{% endblock content %}
