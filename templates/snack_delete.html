@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Update Snack</h2>
+
+<form action="" method="POST">
+    <!-- for security purpose add csrf -->
+    {% csrf_token %}
+    <!-- to make the form more arranged make it as paragraph -->
+    {{form.as_p}}
+    <h2>Are you sure about deleting {{snack.name}}?</h2>
+    <input type="submit" value="Delete">
+</form>
+{% endblock content %}
